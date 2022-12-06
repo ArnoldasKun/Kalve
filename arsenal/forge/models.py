@@ -19,8 +19,14 @@ class Blacksmith(models.Model):
     def __str__(self) -> str:
         return f"{self.first_name} {self.last_name}"
 
+    def display_armors(self) -> str:
+        return ', '.join(armor.title for armor in self.armors.all())
+    display_armors.short_description = 'armors'
+
     class Meta:
         ordering = ['last_name', 'first_name']
+        verbose_name = "blacksmith"
+        verbose_name_plural = "blacksmiths"
 
 
 class Armor(models.Model):
@@ -28,7 +34,8 @@ class Armor(models.Model):
     summary = models.TextField('summary')
     blacksmith = models.ForeignKey(
         Blacksmith, 
-        on_delete=models.SET_NULL, null=True, blank=True)
+        on_delete=models.SET_NULL, null=True, blank=True,
+        related_name='armors')
     armor_type = models.ManyToManyField(
         ArmorType, 
         help_text='Choose armor type for your armor', 
@@ -36,6 +43,10 @@ class Armor(models.Model):
 
     def __str__(self) -> str:
         return f"{self.blacksmith} - {self.title}"
+
+    def display_armor_type(self) -> str:
+        return ', '.join(armor_type.name for armor_type in self.armor_type.all()[:3])
+    display_armor_type.short_description = 'armor_type(s)'
 
 
 class ArmorOrder(models.Model):
