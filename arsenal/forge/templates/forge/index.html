@@ -1,0 +1,11 @@
+{% extends 'forge/base.html' %}
+{% block title %}Welcome to {{ block.super }}{% endblock title %}
+{% block content %}
+<h1>Arsenal Forge</h1>
+<ul>
+    <li>Total armors: {{ armor_count }}</li>
+    <li>Total armor orders: {{ armor_order_count }}</li>
+    <li>Blacksmits: {{ blacksmith_count }}</li>
+    <li>Armor types: {{ armor_type_count }}</li>
+</ul>
+{% endblock content %}
