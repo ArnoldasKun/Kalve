@@ -13,6 +13,10 @@ class ArmorType(models.Model):
     def __str__(self) -> str:
         return self.name
 
+    def link_filtered_armors(self):
+        link = reverse('armors')+'?armor_type_id='+str(self.id)
+        return format_html('<a class="armor_type" href="{link}">{name}</a>', link=link, name=self.name)
+
 
 class Blacksmith(models.Model):
     first_name = models.CharField('first name', max_length=50)
@@ -27,7 +31,9 @@ class Blacksmith(models.Model):
 
     def link(self) -> str:
         link = reverse('blacksmith', kwargs={'blacksmith_id':self.id})
-        return format_html('<a href="{link}">{blacksmith}</a>', link=link, blacksmith=self.__str__())
+        return format_html(
+            '<a href="{link}">{blacksmith}</a>', 
+            link=link, blacksmith=self.__str__())
 
     class Meta:
         ordering = ['last_name', 'first_name']
