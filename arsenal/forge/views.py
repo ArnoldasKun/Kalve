@@ -9,10 +9,10 @@ def index(request):
     blacksmith_count = Blacksmith.objects.count()
 
     context = {
-        'book_count': armor_count,
-        'book_instance_count': armor_order_count,
+        'armor_count': armor_count,
+        'armor_order_count': armor_order_count,
         'blacksmith_count': blacksmith_count,
-        'genre_count': ArmorType.objects.count()
+        'armor_type_count': ArmorType.objects.count()
     }
 
-    return render(request, 'library/index.html', context)
+    return render(request, 'forge/index.html', context)
