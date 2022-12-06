@@ -1,5 +1,7 @@
 from django.utils.translation import gettext_lazy as _
 from django.db import models
+from django.utils.html import format_html
+from django.urls import reverse
 import uuid
 
 
@@ -22,6 +24,10 @@ class Blacksmith(models.Model):
     def display_armors(self) -> str:
         return ', '.join(armor.title for armor in self.armors.all())
     display_armors.short_description = 'armors'
+
+    def link(self) -> str:
+        link = reverse('blacksmith', kwargs={'blacksmith_id':self.id})
+        return format_html('<a href="{link}">{blacksmith}</a>', link=link, blacksmith=self.__str__())
 
     class Meta:
         ordering = ['last_name', 'first_name']
