@@ -16,7 +16,7 @@
                 <a href="{% url 'blacksmiths' %}">Blacksmiths</a>
                 <a href="{% url 'armors' %}">Armors</a>
                 {% if user.is_authenticated %}
-                    <span>{{ user }}</span>
+                    <a href="{% url 'profile' %}">{{ user }}</a>
                     <a href="{% url 'client_armors' %}">My Armors</a>
                     {% if user.is_superuser or user.is_staff %}
                         <a href="{% url 'admin:index' %}">Admin</a>
