@@ -1,7 +1,8 @@
 {% extends 'forge/base.html' %}
+{% load static %}
 {% block title %}Armors in {{ block.super }}{% endblock title %}
 {% block content %}
-    <h1>{{ books_count }} 
+    <h1>{{ armors_count }} 
         {% if armor_type %}{{ armor_type }}{% endif %}
         Armors</h1>
     <div class="paginator">
@@ -23,9 +24,19 @@
             {% endfor %}
         </ul>
     </div>
-    <ul>
+    <ul class="armor_list">
         {% for armor in armor_list %}
-            <li><a href="{% url 'armor' armor.pk %}">{{ armor.title }}</a> - {{ armor.blacksmith.link }}</li>
+        <li class="armor">
+            <a href="{% url 'armor' armor.pk %}">
+                {% if armor.photo %}
+                    <img src="{{ armor.photo.url }}">
+                {% else %}
+                    <img src="{% static 'forge/photo/tuscia.png' %}">
+                {% endif %}
+                <h3>{{ armor.title }}</h3>
+            </a>
+            <p>by {{ armor.blacksmith.link }}</p>
+        </li>
         {% endfor %}
     </ul>
 {% endblock content %}

@@ -52,6 +52,7 @@ class Armor(models.Model):
         ArmorType, 
         help_text='Choose armor type for your armor', 
         verbose_name='armor_type(s)')
+    photo = models.ImageField("photo", upload_to='photos', blank=True, null=True)
 
     def __str__(self) -> str:
         return f"{self.blacksmith} - {self.title}"
