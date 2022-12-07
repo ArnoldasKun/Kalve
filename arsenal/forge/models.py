@@ -110,3 +110,24 @@ class ArmorOrder(models.Model):
 
     class Meta:
         ordering = ['due_back']
+
+
+class ArmorReview(models.Model):
+    armor = models.ForeignKey(
+        Armor, 
+        verbose_name="armor", 
+        on_delete=models.CASCADE, 
+        related_name='reviews',)
+    client = models.ForeignKey(
+        get_user_model(), 
+        verbose_name="client", 
+        on_delete=models.CASCADE, 
+        related_name='armor_reviews',)
+    created_at = models.DateTimeField("created at", auto_now_add=True)
+    content = models.TextField("content", max_length=10000)
+
+    def __str__(self):
+        return f"{self.client} on {self.armor} at {self.created_at}"
+
+    class Meta:
+        ordering = ('-created_at', )

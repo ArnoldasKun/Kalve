@@ -31,7 +31,12 @@ class BlacksmithAdmin(admin.ModelAdmin):
     list_display_links = ('last_name', )
 
 
+class ArmorReviewAdmin(admin.ModelAdmin):
+    list_display = ('armor', 'client', 'created_at')
+
+
 admin.site.register(models.Blacksmith, BlacksmithAdmin)
 admin.site.register(models.ArmorType)
 admin.site.register(models.Armor, ArmorAdmin)
 admin.site.register(models.ArmorOrder, ArmorOrderAdmin)
+admin.site.register(models.ArmorReview, ArmorReviewAdmin)

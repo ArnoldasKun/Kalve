@@ -3,6 +3,7 @@ from django.core.paginator import Paginator
 from django.db.models import Q
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
+from django.views.generic.edit import FormMixin
 from . models import Blacksmith, Armor, ArmorType, ArmorOrder
 
 # Create your views here.
@@ -61,7 +62,7 @@ class ArmorListView(ListView):
         return context
 
     
-class ArmorDetailView(DetailView):
+class ArmorDetailView(FormMixin, DetailView):
     model = Armor
     template_name = 'forge/armor_detail.html'
 
