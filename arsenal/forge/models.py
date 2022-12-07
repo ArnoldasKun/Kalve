@@ -1,6 +1,8 @@
 from django.utils.translation import gettext_lazy as _
+from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils.html import format_html
+from django.utils.timezone import datetime
 from django.urls import reverse
 import uuid
 
@@ -76,6 +78,19 @@ class ArmorOrder(models.Model):
 
     status = models.CharField(
         'status', max_length=1, choices=ORDER_CHOICES, default='m')
+    client = models.ForeignKey(
+        get_user_model(), 
+        verbose_name="client", 
+        on_delete=models.SET_NULL,
+        null=True, blank=True,
+        related_name='ordered_armors',
+    )
+
+    @property
+    def is_overdue(self):
+        if self.due_back and self.due_back < datetime.date(datetime.now()):
+            return True
+        return False
     blacksmith = models.ForeignKey(
         Blacksmith, 
         verbose_name=_('blacksmith'), 

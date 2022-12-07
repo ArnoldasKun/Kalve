@@ -14,15 +14,15 @@ class ArmorAdmin(admin.ModelAdmin):
 
 
 class ArmorOrderAdmin(admin.ModelAdmin):
-    list_display = ('unique_id', 'armor', 'status', 'due_back')
+    list_display = ('unique_id', 'armor', 'status', 'due_back', 'client')
     list_filter = ('status', 'due_back')
-    readonly_fields = ('unique_id', )
-    search_fields = ('unique_id', 'armor__title', 'armor__blacksmith__last_name__exact')
-    list_editable = ('status', 'due_back')
+    readonly_fields = ('unique_id', 'is_overdue' )
+    search_fields = ('unique_id', 'armor__title', 'armor__blacksmith__last_name__exact', 'client__last_name')
+    list_editable = ('status', 'due_back', 'client')
 
     fieldsets = (
         ('General', {'fields': ('unique_id', 'armor')}),
-        ('Availability', {'fields': (('status', 'due_back'),)}),
+        ('Availability', {'fields': (('status', 'due_back', 'is_over_due'), 'client')}),
     )
 
 

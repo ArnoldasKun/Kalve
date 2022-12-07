@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
 from django.db.models import Q
 from django.shortcuts import render, get_object_or_404
@@ -63,3 +64,14 @@ class ArmorListView(ListView):
 class ArmorDetailView(DetailView):
     model = Armor
     template_name = 'forge/armor_detail.html'
+
+
+class ClientArmorListView(LoginRequiredMixin, ListView):
+    model = ArmorOrder
+    template_name = 'forge/client_armor_list.html'
+    paginate_by = 10
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        queryset = queryset.filter(client=self.request.user).order_by('due_back')
+        return queryset
