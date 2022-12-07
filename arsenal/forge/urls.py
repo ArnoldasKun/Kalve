@@ -7,5 +7,5 @@ urlpatterns = [
     path('blacksmith/<int:blacksmith_id>/', views.blacksmith, name='blacksmith'),
     path('armors/', views.ArmorListView.as_view(), name='armors'),
     path('armor/<int:pk>/', views.ArmorDetailView.as_view(), name='armor'),
-    path('my_armors/', views.ClientArmorListView.as_view(), name='user_books'),
+    path('my_armors/', views.ClientArmorListView.as_view(), name='client_armors'),
 ]

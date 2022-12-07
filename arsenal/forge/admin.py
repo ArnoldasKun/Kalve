@@ -22,7 +22,7 @@ class ArmorOrderAdmin(admin.ModelAdmin):
 
     fieldsets = (
         ('General', {'fields': ('unique_id', 'armor')}),
-        ('Availability', {'fields': (('status', 'due_back', 'is_over_due'), 'client')}),
+        ('Availability', {'fields': (('status', 'due_back', 'is_overdue'), 'client')}),
     )
 
 

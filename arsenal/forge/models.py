@@ -91,6 +91,7 @@ class ArmorOrder(models.Model):
         if self.due_back and self.due_back < datetime.date(datetime.now()):
             return True
         return False
+
     blacksmith = models.ForeignKey(
         Blacksmith, 
         verbose_name=_('blacksmith'), 
