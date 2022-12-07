@@ -4,6 +4,7 @@ from django.db import models
 from django.utils.html import format_html
 from django.utils.timezone import datetime
 from django.urls import reverse
+from tinymce.models import HTMLField
 import uuid
 
 
@@ -45,7 +46,7 @@ class Blacksmith(models.Model):
 
 class Armor(models.Model):
     title = models.CharField('title', max_length=255)
-    summary = models.TextField('summary')
+    summary = HTMLField('summary')
     blacksmith = models.ForeignKey(
         Blacksmith, 
         on_delete=models.SET_NULL, null=True, blank=True,
