@@ -1,12 +1,13 @@
 {% extends 'forge/base.html' %}
-{% block title %}Welcome to {{ block.super }}{% endblock title %}
+{% load i18n %}
+{% block title %}{% trans "Welcome to" %} {{ block.super }}{% endblock title %}
 {% block content %}
-<h1>Arsenal Forge</h1>
+<h1>{% trans "Arsenal Forge" %}</h1>
 <ul>
-    <li>Total armors: {{ armor_count }}</li>
-    <li>Total armor orders: {{ armor_order_count }}</li>
-    <li>Blacksmiths: {{ blacksmith_count }}</li>
-    <li>Armor types: {{ armor_type_count }}</li>
-    <li>Visits this session: {{ visits_count }}</li>
+    <li>{% trans "Total armors" %}: {{ armor_count }}</li>
+    <li>{% trans "Total armor orders" %}: {{ armor_order_count }}</li>
+    <li>{% trans "Blacksmiths" %}: {{ blacksmith_count }}</li>
+    <li>{% trans "Armor types" %}: {{ armor_type_count }}</li>
+    <li>{% trans "Visits this session" %}: {{ visits_count }}</li>
 </ul>
 {% endblock content %}

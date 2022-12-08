@@ -1,0 +1,223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-08 18:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < "
+"11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? "
+"1 : n % 1 != 0 ? 2: 3);\n"
+#: .\forge\models.py:13
+msgid "name"
+msgstr "pavadinimas"
+
+#: .\forge\models.py:14
+msgid "Enter name of armor type"
+msgstr "Iveskite šarvų tipą"
+
+#: .\forge\models.py:25
+msgid "first name"
+msgstr "vardas"
+
+#: .\forge\models.py:26
+msgid "last name"
+msgstr "pavardė"
+
+#: .\forge\models.py:33
+msgid "armors"
+msgstr "šarvai"
+
+#: .\forge\models.py:43 .\forge\models.py:98
+msgid "blacksmith"
+msgstr "kalvis"
+
+#: .\forge\models.py:44
+msgid "blacksmiths"
+msgstr "kalviai"
+
+#: .\forge\models.py:48
+msgid "title"
+msgstr "pavadinimas"
+
+#: .\forge\models.py:49
+msgid "summary"
+msgstr "aprašymas"
+
+#: .\forge\models.py:56
+msgid "Choose armor type for your armor"
+msgstr "Pasirinkite šarvų tipą savo šarvams"
+
+#: .\forge\models.py:57 .\forge\models.py:65
+msgid "armor_type(s)"
+msgstr "šarvų tipai"
+
+#: .\forge\models.py:58
+msgid "photo"
+msgstr "nuotrauka"
+
+#: .\forge\models.py:69
+msgid "unique ID"
+msgstr "unikalus ID"
+
+#: .\forge\models.py:70 .\forge\models.py:118
+msgid "armor"
+msgstr "šarvai"
+
+#: .\forge\models.py:71
+msgid "due back"
+msgstr "bus pagaminta"
+
+#: .\forge\models.py:74
+msgid "manufacturing"
+msgstr "gamyba"
+
+#: .\forge\models.py:75
+msgid "repairing"
+msgstr "taisymas"
+
+#: .\forge\models.py:76
+msgid "assembled"
+msgstr "surinktas"
+
+#: .\forge\models.py:77
+msgid "no materials"
+msgstr "neturim medžiagų"
+
+#: .\forge\models.py:81
+msgid "status"
+msgstr "statusas"
+
+#: .\forge\models.py:84 .\forge\models.py:123
+msgid "client"
+msgstr "klientas"
+
+#: .\forge\models.py:102
+msgid "due_back"
+msgstr "pagaminimo data"
+
+#: .\forge\models.py:104
+msgid "price"
+msgstr "kaina"
+
+#: .\forge\models.py:126
+msgid "created at"
+msgstr "sukurta"
+
+#: .\forge\models.py:127
+msgid "content"
+msgstr "komentaras"
+
+#: .\forge\templates\forge\armor_detail.html:8
+#: .\forge\templates\forge\index.html:10
+msgid "Armor types"
+msgstr "Šarvų tipai"
+
+#: .\forge\templates\forge\armor_detail.html:17
+msgid "Reviews"
+msgstr "Apžvalgos"
+
+#: .\forge\templates\forge\armor_detail.html:20
+msgid "If you liked this piece of armor, please leave a review."
+msgstr "Jeigu jums patiko šarvai, palikite komentarą"
+
+#: .\forge\templates\forge\armor_detail.html:24
+msgid "Post Review"
+msgstr "Spaudinti komentarą"
+
+#: .\forge\templates\forge\armor_list.html:3
+#: .\forge\templates\forge\blacksmith.html:3
+msgid "Armors in"
+msgstr "Šarvai"
+
+#: .\forge\templates\forge\armor_list.html:7
+#: .\forge\templates\forge\base.html:17
+#: .\forge\templates\forge\blacksmith.html:5
+msgid "Armors"
+msgstr "Šarvai"
+
+#: .\forge\templates\forge\armor_list.html:20
+msgid "Available Armor types"
+msgstr "Prieinami šarvų tipai"
+
+#: .\forge\templates\forge\base.html:15
+msgid "Home"
+msgstr "Pagrindinis"
+
+#: .\forge\templates\forge\base.html:16
+#: .\forge\templates\forge\blacksmiths.html:5
+#: .\forge\templates\forge\index.html:9
+msgid "Blacksmiths"
+msgstr "Kalviai"
+
+#: .\forge\templates\forge\base.html:21
+#: .\forge\templates\forge\client_armor_list.html:5
+msgid "My Armors"
+msgstr "Mano Šarvai"
+
+#: .\forge\templates\forge\base.html:23
+msgid "Admin"
+msgstr "Adminas"
+
+#: .\forge\templates\forge\base.html:25
+msgid "Logout"
+msgstr "Atsijungti"
+
+#: .\forge\templates\forge\base.html:27
+msgid "Register"
+msgstr "Registruotis"
+
+#: .\forge\templates\forge\base.html:46
+msgid "2022 Arsenalo Kalvė"
+msgstr "2022 Arsenalo Kalvė"
+
+#: .\forge\templates\forge\blacksmiths.html:3
+msgid "Blacksmiths in"
+msgstr "Kalviai"
+
+#: .\forge\templates\forge\client_armor_list.html:3
+msgid "My Armors in"
+msgstr "Mano šarvai"
+
+#: .\forge\templates\forge\client_armor_list.html:7
+msgid "Blacksmith - Armor"
+msgstr "Kalvis - Šarvai"
+
+#: .\forge\templates\forge\client_armor_list.html:8
+msgid "Due Date"
+msgstr "Galutinė Data"
+
+#: .\forge\templates\forge\client_armor_list.html:9
+msgid "Status"
+msgstr "Statusas"
+
+#: .\forge\templates\forge\index.html:3
+msgid "Welcome to"
+msgstr "Sveiki atvykę"
+
+#: .\forge\templates\forge\index.html:5
+msgid "Arsenal Forge"
+msgstr "Arsenalo Kalvė"
+
+#: .\forge\templates\forge\index.html:7
+msgid "Total armors"
+msgstr "Viso šarvų"
+
+#: .\forge\templates\forge\index.html:8
+msgid "Total armor orders"
+msgstr "Viso šarvų užsakymų"
+
+#: .\forge\templates\forge\index.html:11
+msgid "Visits this session"
+msgstr "Apsilankymų skaičius"

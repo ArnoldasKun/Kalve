@@ -1,7 +1,8 @@
 {% extends 'forge/base.html' %}
-{% block title %}Blacksmiths in {{ block.super }}{% endblock title %}
+{% load i18n %}
+{% block title %}{% trans "Blacksmiths in" %} {{ block.super }}{% endblock title %}
 {% block content %}
-    <h1>Blacksmiths</h1>
+    <h1>{% trans "Blacksmiths" %}</h1>
     <div class="paginator">
         {% if blacksmiths.has_other_pages %}
             {% for page_number in blacksmiths.paginator.page_range %}

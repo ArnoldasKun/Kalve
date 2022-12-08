@@ -1,7 +1,8 @@
 {% extends 'forge/base.html' %}
-{% block title %}{{ blacksmith }} Armors in {{ block.super }}{% endblock title %}
+{% load i18n %}
+{% block title %}{{ blacksmith }} {% trans "Armors in" %} {{ block.super }}{% endblock title %}
 {% block content %}
-    <h1>{{ blacksmith }} Armors</h1>
+    <h1>{{ blacksmith }} {% trans "Armors" %}</h1>
     <ul>
         {% for armor in blacksmith.armors.all %}
             <li>{{ armor }}</li>

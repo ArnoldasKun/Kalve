@@ -1,10 +1,11 @@
 {% extends 'forge/base.html' %}
+{% load static i18n %}
 {% block title %}{{ object }}{% endblock title %}
 {% block content %}
     <h1>{{ object.title }}</h1>
     <h3>by {{ object.blacksmith.link }}</h3>
     {% if object.armor_type %}
-        <p>Armor types:
+        <p>{% trans "Armor types" %}:
             {% for armor_type in object.armor_type.all %}
                 {{ armor_type.link_filtered_armors }}
             {% endfor %}
@@ -13,14 +14,14 @@
     <div class="summary">
         {{ object.summary|safe }}
     </div>
-    <h2>Reviews</h2>
+    <h2>{% trans "Reviews" %}</h2>
     {% if user.is_authenticated %}
         <div class="review-form">
-            <p>If you liked this piece of armor, please leave a review.</p>
+            <p>{% trans "If you liked this piece of armor, please leave a review." %}</p>
             <form action="" method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <p><button type="submit">Post Review</button></p>
+                <p><button type="submit">{% trans "Post Review" %}</button></p>
             </form>
         </div>
     {% endif %}

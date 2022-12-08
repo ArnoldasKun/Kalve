@@ -1,11 +1,12 @@
 {% extends 'forge/base.html' %}
-{% block title %}My Armors in {{ block.super }}{% endblock title %}
+{% load i18n %}
+{% block title %}{% trans "My Armors in" %} {{ block.super }}{% endblock title %}
 {% block content %}
-<h1>My Armors</h1>
+<h1>{% trans "My Armors" %}</h1>
 <div class="table-grid my-armors-table">
-    <div class="table-grid-cell center dark">Blacksmith - Armor</div>
-    <div class="table-grid-cell center dark">Due Date</div>
-    <div class="table-grid-cell center dark">Status</div>
+    <div class="table-grid-cell center dark">{% trans "Blacksmith - Armor" %}</div>
+    <div class="table-grid-cell center dark">{% trans "Due Date" %}</div>
+    <div class="table-grid-cell center dark">{% trans "Status" %}</div>
     {% for armor_order in armororder_list %}
         <div class="table-grid-cell">{{ armor_order.armor }}</div>
         <div class="table-grid-cell center{% if armor_order.is_overdue %} overdue{% endif %}">{{ armor_order.due_back }}</div>

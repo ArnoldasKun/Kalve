@@ -1,10 +1,10 @@
 {% extends 'forge/base.html' %}
-{% load static %}
-{% block title %}Armors in {{ block.super }}{% endblock title %}
+{% load static i18n %}
+{% block title %}{% trans "Armors in" %} {{ block.super }}{% endblock title %}
 {% block content %}
     <h1>{{ armors_count }} 
         {% if armor_type %}{{ armor_type }}{% endif %}
-        Armors</h1>
+        {% trans "Armors" %}</h1>
     <div class="paginator">
         {% if page_obj.has_previous %}
             <a href="?{% if request.GET.search %}search={{ request.GET.search }}&{% endif %}page=1">&#11120;</a>
@@ -17,7 +17,7 @@
         {% endif %}
     </div>
     <div class="armor_type_filter">
-        <h3>Available Armor types</h3>
+        <h3>{% trans "Available Armor types" %}</h3>
         <ul>
             {% for filter_armor_type in armor_types %}
             <li class="{% if filter_armor_type == armor_type %}current{% endif %}">{{ filter_armor_type.link_filtered_armors }}</li>
