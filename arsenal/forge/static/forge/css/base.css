@@ -176,7 +176,9 @@ table {
     justify-self: stretch;
 }
 
-.form-grid input {
+.form-grid input[type="text"], 
+.form-grid input[type="email"], 
+.form-grid input[type="password"] {
     width: 90%;
 }
 
