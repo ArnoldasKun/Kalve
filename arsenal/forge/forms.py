@@ -2,6 +2,7 @@ from django import forms
 from django.utils.timezone import datetime, timedelta
 from . models import ArmorReview
 
+
 class ArmorReviewForm(forms.ModelForm):
     def is_valid(self) -> bool:
         valid = super().is_valid()
