@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-08 18:14+0200\n"
+"POT-Creation-Date: 2022-12-08 21:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < "
 "11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? "
 "1 : n % 1 != 0 ? 2: 3);\n"
+
 #: .\forge\models.py:13
 msgid "name"
 msgstr "pavadinimas"
@@ -142,7 +143,7 @@ msgid "Armors in"
 msgstr "Šarvai"
 
 #: .\forge\templates\forge\armor_list.html:7
-#: .\forge\templates\forge\base.html:17
+#: .\forge\templates\forge\base.html:19
 #: .\forge\templates\forge\blacksmith.html:5
 msgid "Armors"
 msgstr "Šarvai"
@@ -151,34 +152,42 @@ msgstr "Šarvai"
 msgid "Available Armor types"
 msgstr "Prieinami šarvų tipai"
 
-#: .\forge\templates\forge\base.html:15
+#: .\forge\templates\forge\base.html:10
+msgid "Forge"
+msgstr "Kalvė"
+
+#: .\forge\templates\forge\base.html:17
 msgid "Home"
 msgstr "Pagrindinis"
 
-#: .\forge\templates\forge\base.html:16
+#: .\forge\templates\forge\base.html:18
 #: .\forge\templates\forge\blacksmiths.html:5
 #: .\forge\templates\forge\index.html:9
 msgid "Blacksmiths"
 msgstr "Kalviai"
 
-#: .\forge\templates\forge\base.html:21
+#: .\forge\templates\forge\base.html:23
 #: .\forge\templates\forge\client_armor_list.html:5
 msgid "My Armors"
 msgstr "Mano Šarvai"
 
-#: .\forge\templates\forge\base.html:23
+#: .\forge\templates\forge\base.html:25
 msgid "Admin"
 msgstr "Adminas"
 
-#: .\forge\templates\forge\base.html:25
+#: .\forge\templates\forge\base.html:27
 msgid "Logout"
 msgstr "Atsijungti"
 
-#: .\forge\templates\forge\base.html:27
+#: .\forge\templates\forge\base.html:29
 msgid "Register"
 msgstr "Registruotis"
 
-#: .\forge\templates\forge\base.html:46
+#: .\forge\templates\forge\base.html:30
+msgid "Login"
+msgstr "Prisijungti"
+
+#: .\forge\templates\forge\base.html:59
 msgid "2022 Arsenalo Kalvė"
 msgstr "2022 Arsenalo Kalvė"
 
@@ -221,3 +230,23 @@ msgstr "Viso šarvų užsakymų"
 #: .\forge\templates\forge\index.html:11
 msgid "Visits this session"
 msgstr "Apsilankymų skaičius"
+
+#: .\forge\views.py:23
+msgid "armor_count"
+msgstr "šarvų skaičius"
+
+#: .\forge\views.py:24
+msgid "armor_order_count"
+msgstr "šarvų užsakymų skaičius"
+
+#: .\forge\views.py:25
+msgid "blacksmith_count"
+msgstr "kalvių skaičius"
+
+#: .\forge\views.py:26
+msgid "armor_type_count"
+msgstr "viso šarvų tipų"
+
+#: .\forge\views.py:27
+msgid "visits_count"
+msgstr "apsilankymų skaičius"

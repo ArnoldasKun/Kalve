@@ -20,11 +20,11 @@ def index(request):
     request.session['visits_count'] = visits_count + 1
 
     context = {
-        'armor_count': armor_count,
-        'armor_order_count': armor_order_count,
-        'blacksmith_count': blacksmith_count,
-        'armor_type_count': ArmorType.objects.count(),
-        'visits_count': visits_count,
+        _('armor_count'): armor_count,
+        _('armor_order_count'): armor_order_count,
+        _('blacksmith_count'): blacksmith_count,
+        _('armor_type_count'): ArmorType.objects.count(),
+        _('visits_count'): visits_count,
     }
 
     return render(request, 'forge/index.html', context)
