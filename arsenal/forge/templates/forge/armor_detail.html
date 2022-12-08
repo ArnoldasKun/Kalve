@@ -27,7 +27,10 @@
     {% if armor.reviews %}
         {% for review in armor.reviews.all %}
             <div class="armor-review">
-                <h4>{{ review.client }}
+                <h4>{% if review.client.profile.photo %}
+                        <img src="{{ review.client.profile.photo.url }}">
+                    {% endif %}
+                    {{ review.client }}
                     <span class="float-right">{{ review.created_at }}</span></h4>
                 <p>{{ review.content }}</p>
             </div>
