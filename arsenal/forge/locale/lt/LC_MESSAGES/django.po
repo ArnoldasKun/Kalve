@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-08 21:19+0200\n"
+"POT-Creation-Date: 2022-12-11 23:08+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -216,8 +216,8 @@ msgid "Welcome to"
 msgstr "Sveiki atvykę"
 
 #: .\forge\templates\forge\index.html:5
-msgid "Arsenal Forge"
-msgstr "Arsenalo Kalvė"
+msgid "Welcome to Forge"
+msgstr "Sveiki atvykę i Kalvę"
 
 #: .\forge\templates\forge\index.html:7
 msgid "Total armors"
@@ -231,22 +231,20 @@ msgstr "Viso šarvų užsakymų"
 msgid "Visits this session"
 msgstr "Apsilankymų skaičius"
 
-#: .\forge\views.py:23
-msgid "armor_count"
-msgstr "šarvų skaičius"
+#~ msgid "Arsenal Forge"
+#~ msgstr "Arsenalo Kalvė"
 
-#: .\forge\views.py:24
-msgid "armor_order_count"
-msgstr "šarvų užsakymų skaičius"
+#~ msgid "armor_count"
+#~ msgstr "šarvų skaičius"
 
-#: .\forge\views.py:25
-msgid "blacksmith_count"
-msgstr "kalvių skaičius"
+#~ msgid "armor_order_count"
+#~ msgstr "šarvų užsakymų skaičius"
 
-#: .\forge\views.py:26
-msgid "armor_type_count"
-msgstr "viso šarvų tipų"
+#~ msgid "blacksmith_count"
+#~ msgstr "kalvių skaičius"
 
-#: .\forge\views.py:27
-msgid "visits_count"
-msgstr "apsilankymų skaičius"
+#~ msgid "armor_type_count"
+#~ msgstr "viso šarvų tipų"
+
+#~ msgid "visits_count"
+#~ msgstr "apsilankymų skaičius"
